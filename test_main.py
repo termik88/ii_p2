@@ -18,6 +18,7 @@ def test_predict_positive():
 
     assert response.status_code == 200
     assert json_data['label'] == 'POSITIVE'
+    assert json_data['score'] == 0.9995693564414978
 
 
 def test_predict_negative():
@@ -28,3 +29,4 @@ def test_predict_negative():
 
     assert response.status_code == 200
     assert json_data['label'] == 'NEGATIVE'
+    assert json_data['score'] == 0.9987558126449585
